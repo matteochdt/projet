@@ -97,7 +97,25 @@ Vecteur Vecteur::mult(double scalaire) {
     return res;
 }
 
-Vecteur Vecteur::prod_scalaire(Vecteur const& autre)  {
+double Vecteur::prod_scal(Vecteur const& autret) {
+    size_t nouvelle_taille;
+    if (coordonnees.size() > autret.coordonnees.size()) {
+        nouvelle_taille = coordonnees.size();
+    } else {
+        nouvelle_taille = autret.coordonnees.size();
+    }
+    Vecteur v1 = this->prolongement_dim(nouvelle_taille);  //
+    Vecteur v2 = autret.prolongement_dim(nouvelle_taille);
+    
+    double res = 0;
+    for (size_t i = 0; i < coordonnees.size(); i++) {
+        res += coordonnees[i] * autret.coordonnees[i];
+    }
+    return res;
+}
+
+
+Vecteur Vecteur::prod_vect(Vecteur const& autre)  {
     if (coordonnees.size() != 3 or autre.coordonnees.size() != 3) {
             throw "Le produit vectoriel n'est défini que pour des vecteurs de dimension 3.";
         }
