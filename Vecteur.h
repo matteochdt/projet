@@ -16,7 +16,8 @@ public:
     Vecteur soustraction(Vecteur const& autre);
     Vecteur oppose();
     Vecteur mult(double scalaire);
-    Vecteur prod_scalaire(Vecteur const& autre); 
+    double prod_scal(Vecteur const& autre); 
+    Vecteur prod_vect(Vecteur const& autre);
     Vecteur prolongement_dim(size_t nouvelle_taille) const;             //renvoi vecteur car sinon change opérandes
     double norme() const;
     double norme2() const;
