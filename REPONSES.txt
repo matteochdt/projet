@@ -1,0 +1,7 @@
+P1.1 Comment représentez-vous ces vecteurs? Comment sont-ils organisés : ql attributs? ql méthodes? ql droits d'accès?
+
+Nous avons utilisé un tableau de type vector pour représenter les coordonées étant donné qu'on ne connait pas,
+à priori,la dimension de ceux-ci. Cela excluait le choix de struct "Coordonnées" avec des doubles x,y,z, ...,
+qui n'aurait pas cette maléabilite.
+
++ evoquer ajsutedement dim qui est une méthode et pas ffonction pour encapsulation
